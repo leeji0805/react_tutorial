@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={'/KakaoTalk_Photo_2024-03-15-18-07-09.png'} className="App-logo" alt="logo" />
+        <img src={logo} className="App-logo" alt="logo" />
         <h1>
           HelloWorld!!
         </h1>
