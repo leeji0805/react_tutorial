@@ -9,13 +9,14 @@ import {
 } 
 from "react-router-dom";
 import "./index.css";
-import Root from "./routes/root";
-
+import Root, { loader as rootLoader } from "./routes/root";
+import {Testpage2, testdataLoader} from "./testpage2.js"
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root />,
     errorElement: <ErrorPage />,
+    loader: rootLoader,
     children: [
       {
         path: "hello-world",
@@ -23,7 +24,14 @@ const router = createBrowserRouter([
       },{
         path: "test",
         element: <Testpage />,
-      },
+      },{
+        
+        path: "test/:id",
+        loader: testdataLoader,
+        
+        element: <Testpage2 />,
+              
+      }
     ],
   },
 ]);
