@@ -13,3 +13,11 @@ export const add = (a, b) => a + b;
  * @returns {number} 배열 내 모든 요소의 합계.
  */
 export const sum = (arr) => arr.reduce((acc, curr) => acc + curr, 0);
+
+
+export const divide = (a,b) => {
+    if (b == 0){
+        return undefined;
+    } 
+    return {quotient:Math.floor(a/b), remainder:a % b}
+}
