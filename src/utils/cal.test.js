@@ -57,13 +57,13 @@ describe('sum function tests', () => {
       [5, 2, { quotient: 2, remainder: 1 }],
       [6, 2, { quotient: 3, remainder: 0 }],
       [1.5, 0.5, { quotient: 3, remainder: 0 }],
-      [-5, 2, { quotient: -2, remainder:-1 }],
+      [-5, 2, { quotient: -3, remainder: 1 }],
       [-6, 0.5, { quotient: -12, remainder: 0 }],
       [0, 10, { quotient: 0, remainder: 0 }],
       [0.2, 0.7, { quotient: 0, remainder: 0.2 }],
       [-0.8, 0.2, { quotient: -4, remainder: 0 }],
       [5, -0.2, { quotient: -25, remainder: 0 }],
-      [0.2, -0.7, { quotient: 0, remainder: 0.2 }]
+      [0.2, -0.7, { quotient: -1, remainder: -0.5 }]
     ];
   
     test.each(cases)(
