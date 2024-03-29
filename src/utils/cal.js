@@ -26,10 +26,24 @@ export const sum = (arr) =>{
  * @param {*} a 
  * @param {*} b 
  * @returns {quotient, remainder} 목, 나머지
+ * 
  */
 export const divide = (a,b) => {
     if (b == 0){
         return undefined;
     } 
-    return {quotient:Math.floor(a/b), remainder:a % b}
+    let quotient = a / b;
+  if (quotient < 0) {
+    quotient = Math.ceil(quotient);
+  } else {
+    quotient = Math.floor(quotient);
+  }
+  let remainder = a - quotient * b;
+
+  // 부동 소수점 오차 조정 및 -0 처리
+  quotient = quotient === -0 ? 0 : quotient;
+  remainder = parseFloat(remainder.toFixed(10));
+  remainder = remainder === -0 ? 0 : remainder;
+
+  return { quotient, remainder };
 }
