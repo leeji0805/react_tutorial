@@ -47,6 +47,12 @@ export default function Root() {
                 <li>
                     <Link to={`/test/2`}>test2</Link>
                 </li>
+                <li>
+                    <Link to={`/counte`}>counter</Link>
+                </li> 
+                <li>
+                    <Link to={`/counte_total`}>counte_total</Link>
+                </li>
                 </ul>
             </nav>
             </div>

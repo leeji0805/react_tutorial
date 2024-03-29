@@ -1,16 +1,18 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom/client";
-import ErrorPage from "./error-page";
-import App from "./App.js"
-import Testpage from "./testpage.jsx"
+import ErrorPage from "./page/error-page.jsx";
+import Hello from "./page/hello.js"
+import Testpage from "./page/testpage.jsx"
+import CounterPage from "./page/counter.jsx"
+import CounterTotalPage from "./page/counter_total.jsx";
 import {
   createBrowserRouter,
   RouterProvider,
 } 
 from "react-router-dom";
 import "./index.css";
-import Root, { loader as rootLoader } from "./routes/root";
-import {Testpage2, testdataLoader} from "./testpage2.js"
+import Root, { loader as rootLoader } from "./routes/root.jsx";
+import {Testpage2, testdataLoader} from "./page/testpage2.js"
 const router = createBrowserRouter([
   {
     path: "/",
@@ -20,7 +22,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "hello-world",
-        element: <App />,
+        element: <Hello />,
       },{
         path: "test",
         element: <Testpage />,
@@ -31,6 +33,14 @@ const router = createBrowserRouter([
         
         element: <Testpage2 />,
               
+      },{
+        
+        path: "counte",
+        element: <CounterPage />,
+              
+      },{
+        path:"counte_total",
+        element:<CounterTotalPage/>
       }
     ],
   },
