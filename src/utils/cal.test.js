@@ -33,7 +33,9 @@ describe('sum function tests', () => {
     const cases = [
       [[1, 2, 3], 6],
       [[-1, 1], 0],
-      [[0, 0, 0, 1], 1]
+      [[0, 0, 0, 1], 1],
+      [[],undefined],
+      [[-2],-2]
     ];
   
     test.each(cases)(
