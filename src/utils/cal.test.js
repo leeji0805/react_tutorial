@@ -40,5 +40,3 @@ describe('sum function tests', () => {
       }
     );
   });
-
-  
