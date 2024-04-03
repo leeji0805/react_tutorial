@@ -34,7 +34,10 @@ describe('minus function tests', () => {
   const cases = [
     [5, 2, 3],
     [10, 3, 7],
-    [4, 4, 0]
+    [4, 4, 0],
+    [7, -2, 9],
+    [5, -6, 11],
+    [-5, 2, -7]
   ];
 
   test.each(cases)(
