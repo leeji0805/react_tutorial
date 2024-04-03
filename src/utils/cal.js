@@ -1,5 +1,6 @@
 /**
- * a + b 를 리턴한다.  
+ * a + b 를 리턴한다 
+>>>>>>> own/main
  * @param {*} a 
  * @param {*} b 
  * @returns 
@@ -48,3 +49,12 @@ export const divide = (a,b) => {
     remainder = remainder === 0 ? 0 : parseFloat(remainder.toFixed(10));
     return {quotient, remainder}
 }
+/*
+* a - b 를 리턴한다 
+* @param {*} a 
+* @param {*} b 
+* @returns 
+*/
+export const minus = (a, b) => a - b;
+
+export const sumArray = (arr) => arr.reduce((acc, curr) => acc + curr, 0);
