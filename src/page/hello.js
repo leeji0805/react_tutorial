@@ -1,7 +1,6 @@
+import '../css/hello.css';
 
-import './App.css';
-
-function App() {
+function Hello() {
   return (
         <h1>
           HelloWorld!!
@@ -9,4 +8,4 @@ function App() {
        );
 }
 
-export default App;
+export default Hello;
